@@ -15,6 +15,9 @@ api-node.iml
 modules.xml
 vcs.xml
 
+# node modules
+node_modules
+
 
 
 
