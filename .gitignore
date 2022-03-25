@@ -14,9 +14,11 @@ node_modules/
 api-node.iml
 modules.xml
 vcs.xml
+/.idea/workspace.xml
 
 # node modules
 node_modules
+
 
 
 
