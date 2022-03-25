@@ -1,0 +1,21 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+
+# Dependency directories
+node_modules/
+
+# dotenv environment variable files
+.env
+
+# idea Folder
+api-node.iml
+modules.xml
+vcs.xml
+
+
+
+
+
