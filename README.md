@@ -14,6 +14,9 @@ https://www.linkedin.com/learning/node-js-et-express-construire-des-api/connaitr
 
 ### Middleware :
 
+CORS : Cross-origin resource sharing (CORS) is a mechanism that allows 
+restricted resources on a web page to be requested from another domain 
+outside the domain from which the first resource was served
 https://selvaganesh93.medium.com/how-node-js-middleware-works-d8e02a936113
 
 ### Nodemon :
@@ -30,3 +33,5 @@ npm i -s nodemon
 https://mongoosejs.com/docs/guide.html
 
 ## ____________________________________________________
+
+Listener en bas de fichier !!!
