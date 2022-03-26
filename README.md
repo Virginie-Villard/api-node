@@ -25,6 +25,8 @@ in the directory are detected.
 npm i -s nodemon
 ```
 
+### MongoDB / mongoose :
 
+https://mongoosejs.com/docs/guide.html
 
 ## ____________________________________________________
