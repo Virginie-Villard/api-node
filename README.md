@@ -38,6 +38,17 @@ install :
 
 https://www.mongodb.com/docs/guides/server/install/
 
+### Docker
+
+```
+docker compose up -d
+```
+(-d = detached)
+
+username & password are set in the `docker-compose.yml` file  
+
+
+
 ## ____________________________________________________
 
 Listener en bas de fichier !!!
