@@ -24,13 +24,19 @@ https://selvaganesh93.medium.com/how-node-js-middleware-works-d8e02a936113
 nodemon is a tool that helps develop node.js based applications by 
 automatically restarting the node application when file changes 
 in the directory are detected.
-```
+```bash
 npm i -s nodemon
 ```
 
-### MongoDB / mongoose :
+### MongoDB / mongoose : ______
 
+#### Mongoose :
 https://mongoosejs.com/docs/guide.html
+
+#### MongoDB :
+install :
+
+https://www.mongodb.com/docs/guides/server/install/
 
 ## ____________________________________________________
 
