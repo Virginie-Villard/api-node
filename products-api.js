@@ -1,6 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const { MongoClient, ServerApiVersion } = require('mongodb');
+
+
+const uri = "mongodb+srv://virginie:password@cluster0.ort7q.mongodb.net/api-node?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+
 
 const app = express();
 const port = 3000;
@@ -22,6 +28,15 @@ app.post('/product', (req, res) => {
     // Output the product to the console for debugging
     console.log(product);
     products.push(product);
+
+    client.connect(err => {
+        const collection = client.db("api-node").collection("products");
+
+        collection.insertOne(product).catch(e => console.error(e))
+
+
+        //client.close();
+    });
 
     res.send('Product is added to the database');
 });
