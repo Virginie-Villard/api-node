@@ -2,7 +2,7 @@
 .env
 .idea
 node_modules
-
+docker/mongo/data
 
 
 
