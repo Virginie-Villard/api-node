@@ -4,16 +4,14 @@ const cors = require('cors');
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
 
-const uri = "mongodb+srv://virginie:password@cluster0.ort7q.mongodb.net/api-node?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-
-
-const app = express();
 const port = 3000;
 
-// Where we will keep products
-let products = [];
+const password = "TT5VY6upnstY9G"
+const uri = "mongodb+srv://virginie:"+password+"@cluster0.ort7q.mongodb.net/api-node?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+client.connect(err => { console.log("Mongodb is connected") });
 
+const app = express();
 app.use(cors());
 
 // Configuring body parser middleware
@@ -24,20 +22,9 @@ app.use(bodyParser.json());
 
 app.post('/product', (req, res) => {
     const product = req.body;
-
-    // Output the product to the console for debugging
     console.log(product);
-    products.push(product);
-
-    client.connect(err => {
-        const collection = client.db("api-node").collection("products");
-
-        collection.insertOne(product).catch(e => console.error(e))
-
-
-        //client.close();
-    });
-
+    const collection = client.db("api-node").collection("products");
+    collection.insertOne(product).catch(e => console.error(e))
     res.send('Product is added to the database');
 });
 
